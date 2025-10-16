@@ -9,19 +9,14 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: #000; /* cor de fundo caso necessário */
     }
 
     .bg {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
+      display: block;
+      width: 100%; /* faz a imagem ocupar toda a largura */
+      height: auto; /* mantém a proporção e permite rolagem se necessário */
     }
   </style>
 </head>
@@ -34,4 +29,3 @@
   </picture>
 </body>
 </html>
-
