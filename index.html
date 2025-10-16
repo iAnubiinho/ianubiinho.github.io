@@ -6,31 +6,32 @@
   <title>Rogers Salvage & Scrap</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Faz a imagem de fundo preencher toda a tela sem cortar */
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #000; /* cor de fundo caso necessário */
     }
 
-    body {
-      /* Substitua pelo caminho da sua imagem para PC */
-      background-image: url('assets/pc.webp');
-      background-repeat: no-repeat;
-      background-size: contain; /* garante que a imagem inteira apareça */
-      background-position: center center; /* centraliza a imagem na tela */
-    }
-
-    @media (max-width: 768px) {
-      body {
-        /* Substitua pelo caminho da sua imagem para celular */
-        background-image: url('assets/mobile.webp');
-      }
+    .bg {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
     }
   </style>
 </head>
 <body>
+  <picture>
+    <!-- Imagem para telas pequenas -->
+    <source srcset="assets/mobile.webp" media="(max-width: 768px)">
+    <!-- Imagem para telas maiores -->
+    <img src="assets/pc.webp" alt="Rogers Salvage & Scrap" class="bg">
+  </picture>
 </body>
 </html>
+
